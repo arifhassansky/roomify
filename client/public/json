@@ -1,0 +1,325 @@
+[
+  {
+    "name": "Beachfront Paradise Suite",
+    "image": "https://i.ibb.co.com/jfxPQG7/room1.jpg",
+    "description": "This luxurious beachfront suite offers panoramic views of the ocean, providing guests with an unforgettable experience. With a king-sized bed, a spacious living area, and modern amenities like air conditioning and Wi-Fi, it's perfect for those who want to enjoy the sound of waves from their private balcony. The suite also includes a fully equipped bathroom, and guests can take advantage of the beach access right outside their door.",
+    "price": 350,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Private Balcony",
+      "Beach Access"
+    ],
+    "reviews": [],
+    "capacity": 2,
+    "offer": "New Year Offer"
+  },
+  {
+    "name": "Seaview Deluxe Room",
+    "image": "https://i.ibb.co.com/8bFJHkZ/room2.jpg",
+    "description": "This cozy and serene room offers stunning sea views from the comfort of a queen-sized bed. Designed for relaxation, the room features an ensuite bathroom and modern amenities such as a flat-screen TV, Wi-Fi, and room service. It's ideal for couples seeking tranquility and a beautiful coastal escape.",
+    "price": 250,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Sea Views",
+      "Room Service",
+      "Flat-Screen TV"
+    ],
+    "reviews": [],
+    "capacity": 2,
+    "offer": "New Year Offer"
+  },
+  {
+    "name": "Family Suite with Pool Access",
+    "image": "https://i.ibb.co.com/G20tYfp/room3.jpg",
+    "description": "A spacious family suite designed to accommodate families with comfort and style. This suite includes a king-sized bed and twin beds, making it perfect for family vacations. Guests can enjoy direct access to a private pool, creating a fun and relaxing experience for all family members. With a mini bar, Wi-Fi, and modern furnishings, the suite is equipped with all the amenities to make your stay memorable.",
+    "price": 450,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Pool Access",
+      "Family Friendly",
+      "Mini Bar"
+    ],
+    "reviews": [],
+    "capacity": 4,
+    "offer": "New Year Offer"
+  },
+  {
+    "name": "Eco-Friendly Garden Room",
+    "image": "https://i.ibb.co.com/R3FJhPG/room4.jpg",
+    "description": "Stay close to nature in this eco-friendly room, designed with sustainability in mind. The room features garden views, a queen-sized bed, and eco-friendly furnishings that promote relaxation in a natural setting. Perfect for eco-conscious travelers, this room also offers amenities like Wi-Fi and a private balcony. Pet-friendly, it's a great option for those traveling with pets while enjoying the beauty of nature.",
+    "price": 220,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Garden View",
+      "Eco-Friendly Design",
+      "Pet Friendly"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Luxury Penthouse Suite",
+    "image": "https://i.ibb.co.com/XxmHfwq/room5.jpg",
+    "description": "Indulge in ultimate luxury with this penthouse suite, offering breathtaking ocean views from your private terrace. The suite comes with a king-sized bed, jacuzzi, and personalized service to ensure a stay beyond expectations. It's the perfect escape for those looking to unwind in opulence, with additional amenities such as Wi-Fi, air conditioning, and a fully stocked mini bar.",
+    "price": 600,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Private Terrace",
+      "Jacuzzi",
+      "Personalized Service"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Oceanfront Bungalow",
+    "image": "https://i.ibb.co.com/q9Vyx1d/room6.jpg",
+    "description": "This charming bungalow is just steps from the beach and features a king-sized bed, a private deck, and a hammock for ultimate relaxation. With ocean views, it provides a serene environment perfect for unwinding. The bungalow is equipped with Wi-Fi, a private deck for sunbathing, and direct beach access to complete your coastal getaway.",
+    "price": 300,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Beach Access",
+      "Private Deck",
+      "Hammock"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Elegant Twin Room",
+    "image": "https://i.ibb.co.com/vZGx6r2/slide-1.jpg",
+    "description": "This elegant room features two twin beds, a seating area, and easy access to the beach. Ideal for friends or siblings traveling together, this room offers comfort and convenience with modern amenities like Wi-Fi, air conditioning, and a flat-screen TV. Room service is available for added convenience, making it a great choice for a relaxing stay by the coast.",
+    "price": 200,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Flat-Screen TV",
+      "Room Service"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Seaside Studio Apartment",
+    "image": "https://i.ibb.co.com/4JTLn73/room8.jpg",
+    "description": "This modern studio apartment offers a queen-sized bed, kitchenette, and a private balcony with partial sea views. Ideal for short stays or those seeking more independence, this room combines convenience and comfort with amenities like Wi-Fi and room service. Whether you're preparing a meal in the kitchenette or relaxing on the balcony, you'll enjoy a comfortable and stylish stay.",
+    "price": 260,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Kitchenette",
+      "Sea Views",
+      "Room Service"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Grand Family Suite",
+    "image": "https://i.ibb.co.com/0hgLh58/room9.jpg",
+    "description": "This expansive suite features a king-sized bed, twin beds, and a living area, making it perfect for family gatherings. With stunning beach views, this suite ensures a memorable stay for families seeking both comfort and convenience. The suite is equipped with modern amenities such as Wi-Fi, a mini bar, and room service, all designed to enhance your family's vacation experience.",
+    "price": 500,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Family Friendly",
+      "Beach Views",
+      "Room Service"
+    ],
+    "reviews": [],
+    "capacity": 4
+  },
+  {
+    "name": "Budget-Friendly Room",
+    "image": "https://i.ibb.co.com/4TPvQTW/room-10.jpg",
+    "description": "This affordable room is designed for budget-conscious travelers seeking a comfortable stay. It features a cozy bed, basic amenities like air conditioning and Wi-Fi, and easy access to the beach. With room service and free parking, it's the perfect choice for those who want to enjoy the beach without breaking the bank.",
+    "price": 150,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Room Service",
+      "Free Parking"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Luxury Oceanview Room",
+    "image": "https://i.ibb.co.com/MN76xZz/room11.jpg",
+    "description": "This stunning room offers breathtaking ocean views, a king-sized bed, and luxurious amenities. With a spacious layout and stylish design, the room features a Jacuzzi, a mini bar, and access to modern comforts like Wi-Fi. It's perfect for those seeking an elegant and relaxing stay by the ocean.",
+    "price": 400,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Ocean View",
+      "Jacuzzi",
+      "Mini Bar"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Garden View Retreat",
+    "image": "https://i.ibb.co.com/BsDKH7c/rom12.jpg",
+    "description": "A peaceful retreat surrounded by lush gardens, this room features a queen-sized bed, a private balcony, and a mini fridge for added convenience. Ideal for those looking to unwind in a tranquil environment, it offers Wi-Fi, garden views, and all the essentials for a relaxing stay.",
+    "price": 220,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Garden Views",
+      "Private Balcony",
+      "Mini Fridge"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Penthouse Sky Suite",
+    "image": "https://i.ibb.co.com/ZNVjx8L/room13.jpg",
+    "description": "The Penthouse Sky Suite is the epitome of luxury, featuring a private rooftop terrace with panoramic views of the surrounding area. With a king-sized bed, luxurious furnishings, and a rooftop pool, this suite offers an unparalleled experience for those seeking the best in comfort and style. Perfect for special occasions or a lavish getaway, it also includes all modern amenities such as Wi-Fi, room service, and personalized concierge service.",
+    "price": 750,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Private Terrace",
+      "Rooftop Pool",
+      "Luxury Furnishings"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Beach House Retreat",
+    "image": "https://i.ibb.co.com/ngtYJ0Q/room14.jpg",
+    "description": "This charming beach house offers a cozy escape with a king-sized bed, a full kitchen, and a private garden. Perfect for long stays or a more intimate retreat, it provides guests with the comfort of a home away from home, featuring modern amenities like Wi-Fi, a private patio, and beach access just steps away.",
+    "price": 350,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Kitchen",
+      "Private Garden",
+      "Beach Access"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Lagoon View Room",
+    "image": "https://i.ibb.co.com/f8ZHmH8/rom15.jpg",
+    "description": "This tranquil room offers serene views of a private lagoon, perfect for those seeking a peaceful getaway. With a queen-sized bed, a spacious ensuite bathroom, and a private balcony, it provides a comfortable environment to relax. The room also features modern amenities like Wi-Fi, air conditioning, and room service for added convenience.",
+    "price": 270,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Lagoon Views",
+      "Private Balcony",
+      "Room Service"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Tropical Garden Villa",
+    "image": "https://i.ibb.co.com/dbTRnqv/room16.jpg",
+    "description": "Escape to this tropical garden villa, where guests can enjoy a king-sized bed, a spacious living area, and lush garden views. The villa features an open-plan design with a fully equipped kitchen, allowing you to cook your meals while enjoying the peaceful surroundings. Wi-Fi, air conditioning, and a private pool complete the experience.",
+    "price": 500,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Private Pool",
+      "Garden Views",
+      "Fully Equipped Kitchen"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Clifftop Retreat",
+    "image": "https://i.ibb.co.com/TPDpVpX/room17.jpg",
+    "description": "Located on a clifftop, this luxurious suite offers stunning panoramic views of the ocean. Featuring a king-sized bed, a private terrace, and an outdoor jacuzzi, it's the perfect place for relaxation and privacy. The suite includes modern amenities like Wi-Fi, air conditioning, and a mini bar, ensuring a lavish and comfortable stay.",
+    "price": 650,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Ocean Views",
+      "Private Terrace",
+      "Jacuzzi"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Hillside Cottage",
+    "image": "https://i.ibb.co.com/GTJxsST/room18.jpg",
+    "description": "This cozy hillside cottage offers a queen-sized bed, a fully equipped kitchen, and a comfortable living area with views of the surrounding hills. It's perfect for those seeking a more secluded and peaceful experience, with amenities like Wi-Fi, air conditioning, and a private garden. The cottage provides the ultimate escape from the hustle and bustle of city life.",
+    "price": 280,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Private Garden",
+      "Fully Equipped Kitchen",
+      "Air Conditioning"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Mountain View Suite",
+    "image": "https://i.ibb.co.com/X4kYvv0/room19.jpg",
+    "description": "This suite offers stunning views of the nearby mountains and is designed for those who want to relax in a peaceful environment. It features a king-sized bed, a luxurious bathroom, and a private balcony. Modern amenities like Wi-Fi, air conditioning, and room service ensure a comfortable stay, making it ideal for nature lovers and adventurers alike.",
+    "price": 320,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Mountain Views",
+      "Private Balcony",
+      "Room Service"
+    ],
+    "reviews": [],
+    "capacity": 2
+  },
+  {
+    "name": "Luxury Beachfront Bungalow",
+    "image": "https://i.ibb.co.com/KLgM77G/room20.jpg",
+    "description": "This beachfront bungalow offers unparalleled ocean views, a king-sized bed, and luxurious amenities. With a private deck, hammock, and outdoor shower, it's perfect for a romantic getaway or a peaceful retreat. The bungalow also comes with Wi-Fi, air conditioning, and a mini bar to ensure maximum comfort.",
+    "price": 700,
+    "location": "Cox's Bazar",
+    "availability": true,
+    "amenities": [
+      "WiFi",
+      "Beachfront",
+      "Private Deck",
+      "Mini Bar"
+    ],
+    "reviews": [],
+    "capacity": 2
+  }
+]
