@@ -69,6 +69,18 @@ This project aims to create a **Hotel Booking Platform** that combines a sleek u
   - Lottie React (v2.4.0) for animations
   - Leaflet (v1.9.4) for interactive maps
   - React Framer Motion
+ 
+## 🚀 Technology Stats
+
+<div>
+  <img src="https://img.shields.io/badge/React-60%25-blue" alt="React Usage" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-30%25-green" alt="Tailwind CSS Usage" />
+  <img src="https://img.shields.io/badge/Firebase-10%25-orange" alt="Firebase Usage" />
+</div>
+
+- **React**: 60% of the application logic and UI.
+- **Tailwind CSS**: 30% for creating responsive, customizable designs.
+- **Firebase**: 10% for authentication and database management.
 
 ## 📍 Live URL
 
