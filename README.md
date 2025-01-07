@@ -38,13 +38,13 @@ This project aims to create a **Hotel Booking Platform** that combines a sleek u
 - **404 Page**:
   - A fun 404 page with an exciting image and a "Back to Home" button.
 
-## 🌟 Key Technology
+## 🌟 Key Technologies
 
-- **Tailwind**
-- **React**
-- **Javascript**
-- **Express.js**
-- **MongoDB**
+- **Tailwind CSS**: Utility-first CSS framework for custom designs.
+- **React**: JavaScript library for building user interfaces.
+- **JavaScript**: Core programming language for application functionality.
+- **Express.js**: Web framework for building backend services.
+- **MongoDB**: NoSQL database for storing user data and bookings.
 
 ## 🛠 Dependencies
 
