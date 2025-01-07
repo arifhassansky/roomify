@@ -72,8 +72,8 @@ This project aims to create a **Hotel Booking Platform** that combines a sleek u
 
 ## 📍 Live URL
 
-- **Netlify**: [Roomify Platform](https://roomifysky.netlify.app)
-- **Firebase**: [Roomify Platform on Firebase](https://roomify-984fd.web.app)
+- **Netlify**: https://roomifysky.netlify.app
+- **Firebase**: https://roomify-984fd.web.app
 
 ## 💻 Local Setup Guide
 
