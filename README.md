@@ -6,6 +6,20 @@ Welcome to the **Roomify Platform** repository! This project is designed to prov
 
 This project aims to create a **Hotel Booking Platform** that combines a sleek user interface with robust functionality. It includes features like room booking, user authentication, and booking management, along with a review system and access control. The platform ensures an engaging and secure experience for users, whether they are booking a room or leaving reviews.
 
+## 📸 Project Screenshots
+
+### Project Screenshot 1
+
+<div align="center">
+  <img height="300" src="https://i.ibb.co.com/QKxcW7d/Screenshot-2025-01-08-034336.png" alt="Visa Navigator Portal Screenshot 1"/>
+</div>
+
+### Project Screenshot 2
+
+<div align="center">
+  <img height="300" src="https://i.ibb.co.com/806Bk4G/Screenshot-2025-01-08-034401.png" alt="Visa Navigator Portal Screenshot 2"/>
+</div>
+
 ## 🌟 Key Features
 
 - **Homepage Design**:
