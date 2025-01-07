@@ -41,9 +41,14 @@ This project aims to create a **Hotel Booking Platform** that combines a sleek u
 - **404 Page**:
   - A fun 404 page with an exciting image and a "Back to Home" button.
 
-## 🛠 Technologies Used
+## 🌟 Key Technology
+**Tailwind**
+**React**
+**Javascript**
+**Express js**
+**MongoDB**
 
-- **Frontend**:
+## 🛠 Dependency
 
   - React (v18.3.1)
   - React Router (v7.1.0)
@@ -58,10 +63,6 @@ This project aims to create a **Hotel Booking Platform** that combines a sleek u
   - React Scroll Trigger (v0.6.14)
   - React Leaflet (v5.0.0-rc.2)
   - Swiper (v11.1.15)
-
-- **Backend**:
-
-  - Express JS
 
 - **Styling**:
 
