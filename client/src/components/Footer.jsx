@@ -20,10 +20,18 @@ const Footer = () => {
             <ul>
               <li>
                 <a
-                  href="/"
+                  href="/gallery"
                   className="hover:text-secondary transition duration-300"
                 >
-                  Home
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="hover:text-secondary transition duration-300"
+                >
+                  About
                 </a>
               </li>
               <li>
@@ -34,20 +42,21 @@ const Footer = () => {
                   Rooms
                 </a>
               </li>
-              <li>
-                <a
-                  href="/my-bookings"
-                  className="hover:text-secondary transition duration-300"
-                >
-                  My Bookings
-                </a>
-              </li>
+
               <li>
                 <a
                   href="/contact"
                   className="hover:text-secondary transition duration-300"
                 >
                   Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/myBookings"
+                  className="hover:text-secondary transition duration-300"
+                >
+                  My Bookings
                 </a>
               </li>
             </ul>
@@ -117,13 +126,13 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <p>Email: support@roomify.com</p>
+                <p>Email: arifskypro@gmail.com</p>
               </li>
               <li>
-                <p>Phone: +123 456 7890</p>
+                <p>Whatsapp: +8801960606195</p>
               </li>
               <li>
-                <p>Address: 123 Roomify St, V10, Dhaka, Bangladesh</p>
+                <p>Address: Modammadpur, Dhaka, Bangladesh.</p>
               </li>
             </ul>
           </div>
@@ -131,18 +140,10 @@ const Footer = () => {
       </div>
 
       <div className="py-4 bg-[#392380] px-8">
-        <div className="flex justify-between items-center">
-          <div>
-            <p className="text-sm">© 2024 Roomify. All Rights Reserved.</p>
-          </div>
-          <div className="flex gap-4 text-sm">
-            <a href="#" className="hover:text-secondary">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-secondary">
-              Terms & Conditions
-            </a>
-          </div>
+        <div className="text-center">
+          <p className="text-sm">
+            © {new Date().getFullYear()} Md.Arif Hassan | All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>

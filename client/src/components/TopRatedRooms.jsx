@@ -42,19 +42,19 @@ const TopRatedRooms = () => {
           Explore the Best of the Best – Our Most Loved and Highly Rated Rooms!
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {rooms.map((room) => (
           <div
             key={room._id}
-            className="bg-white rounded-xl shadow-lg overflow-hidden p-6"
+            className="bg-white rounded-lg shadow-lg overflow-hidden"
             onClick={() => navigate(`/room/${room._id}`)}
           >
             <img
               src={room.image}
               alt={room.name}
-              className="w-full h-48 object-cover rounded-xl hover:scale-105"
+              className="w-full h-48 object-cover duration-300 hover:scale-105"
             />
-            <div className="mb-2">
+            <div className="mb-2 px-4">
               <div className="flex justify-between items-center mt-6">
                 <h3 className="text-xl font-semibold">{room.name}</h3>
                 <p className="text-gray-500">{room.location}</p>

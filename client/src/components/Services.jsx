@@ -6,7 +6,6 @@ import {
   FaTshirt,
   FaSwimmingPool,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const services = [
   {
@@ -53,12 +52,12 @@ const Services = () => {
       <div className="w-11/12 mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h4 className="text-sm uppercase tracking-wider text-gray-500">
-            Discover the Services We Offer
-          </h4>
           <h2 className="text-5xl lg:text-4xl font-bold text-gray-800">
             Our Services
           </h2>
+          <h4 className="text-sm uppercase tracking-wider text-gray-500">
+            Discover the Services We Offer
+          </h4>
         </div>
 
         {/* Content */}
@@ -66,15 +65,11 @@ const Services = () => {
           {/* Services List */}
           <div className="w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 ">
             {services.map((service, index) => (
-              <motion.div
-                initial={{ y: 20 }}
-                animate={{ y: 0 }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+              <div
                 key={index}
-                className="flex items-start space-x-4 p-6 rounded-lg  hover:shadow-xl transition-shadow duration-300"
+                className="flex items-start space-x-4 p-6 rounded-lg"
               >
-                <div className="text-primary hover:scale-110 text-4xl ">
+                <div className="text-primary hover:scale-110 text-4xl">
                   {service.icon}
                 </div>
                 <div>
@@ -85,7 +80,7 @@ const Services = () => {
                     {service.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
