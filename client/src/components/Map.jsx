@@ -4,7 +4,7 @@ const Map = () => {
   const position = [23.7662, 90.3589];
 
   return (
-    <div className="w-full mx-auto py-28 bg-gradient-to-r from-blue-50 to-blue-100 px-12">
+    <div className="w-full mx-auto py-28 px-12">
       <div className="text-center mb-16">
         <h2 className="font-bold text-4xl text-gray-800 mb-2">Find Us On</h2>
         <p className="font-medium text-xl text-gray-700">

@@ -51,7 +51,7 @@ const ReviewSlider = () => {
   };
 
   return (
-    <div className="py-20 px-8  bg-secondary mx-auto overflow-x-hidden">
+    <div className="py-20 px-8 bg-white overflow-x-hidden">
       <div className="mb-12 text-center">
         <h2 className="font-bold text-4xl text-gray-800 mb-2">
           What Our Users Say
