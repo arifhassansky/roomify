@@ -46,7 +46,7 @@ const TopRatedRooms = () => {
         {rooms.map((room) => (
           <div
             key={room._id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
+            className="bg-white rounded-lg shadow-lg hover:shadow-2xl overflow-hidden"
             onClick={() => navigate(`/room/${room._id}`)}
           >
             <img
@@ -54,16 +54,19 @@ const TopRatedRooms = () => {
               alt={room.name}
               className="w-full h-48 object-cover duration-300 hover:scale-105"
             />
-            <div className="mb-2 px-4">
-              <div className="flex justify-between items-center mt-6">
-                <h3 className="text-xl font-semibold">{room.name}</h3>
-                <p className="text-gray-500">{room.location}</p>
+            <div className="mb-2 px-4 flex flex-col h-64">
+              <div className="flex-1">
+                <div className="flex justify-between items-center mt-6">
+                  <h3 className="text-xl font-semibold">{room.name}</h3>
+                  <p className="text-gray-500">{room.location}</p>
+                </div>
+                <p className="text-gray-700 mt-4">
+                  {room.description.slice(0, 100)}
+                  <span className="font-semibold text-lg"> more...</span>
+                </p>
               </div>
-              <p className="text-gray-700 mt-4">
-                {room.description.slice(0, 135)}
-                <span className="font-semibold text-lg"> more...</span>
-              </p>
-              <div className="flex justify-between items-center mt-6">
+
+              <div className="flex justify-between items-center mt-6 mb-4">
                 <p className=" font-bold text-lg">${room.price} / night</p>
                 <button className=" px-4 py-2 bg-primary  hover:bg-secondary text-white hover:text-black rounded-lg hover:bg-primary-dark">
                   Book Now

@@ -12,6 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "http://localhost:5174",
       "https://roomifysky.netlify.app",
       "https://roomify-984fd.web.app",
       "https://roomify-984fd.firebaseapp.com",

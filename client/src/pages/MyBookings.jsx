@@ -4,6 +4,7 @@ import authContext from "../context/AuthContext";
 import { toast } from "react-hot-toast";
 import moment from "moment";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 const MyBookings = () => {
   const { user, logOut } = useContext(authContext);
@@ -167,73 +168,96 @@ const MyBookings = () => {
       <Helmet>
         <title>My Booking | Roomify</title>
       </Helmet>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse bg-white shadow-md rounded-lg">
-          <thead className="bg-primary text-white uppercase text-sm lg:text-md">
-            <tr>
-              <th className="px-4 py-2 text-left">Image</th>
-              <th className="px-4 py-2">Room Name</th>
-              <th className="px-4 py-2">Price</th>
-              <th className="px-4 py-2">Guests</th>
-              <th className="px-4 py-2">Booking Date</th>
-              <th className="px-4 py-2">Actions</th>
-            </tr>
-          </thead>
-          <tbody className="text-gray-600 text-md lg:text-lg">
-            {bookings.map((booking, index) => (
-              <tr
-                key={index}
-                className={`text-center ${
-                  index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                }`}
-              >
-                <td className="px-4 py-2">
-                  <img
-                    src={booking.image}
-                    alt={booking.name}
-                    className="w-12 h-12 rounded-lg object-cover"
-                  />
-                </td>
-                <td className="px-4 py-2">{booking.name}</td>
-                <td className="px-4 py-2">${booking.price}</td>
-                <td className="px-4 py-2">{booking.capacity}</td>
-                <td className="px-6 py-4 text-sm font-medium text-gray-700 border-b">
-                  <span className="font-semibold text-gray-900">From: </span>
-                  {booking.startDate}
-                  <br />
-                  <span className="font-semibold text-gray-900">To: </span>
-                  {booking.endDate}
-                </td>
-                <td className="px-4 py-4 text-sm flex flex-col justify-center items-center gap-2 lg:flex-row lg:gap-4">
-                  <button
-                    onClick={() =>
-                      handleCancel(
-                        booking._id,
-                        booking.Room_id,
-                        booking.startDate
-                      )
-                    }
-                    className="px-2 py-1 text-red-600 border border-red-600 rounded hover:bg-red-600 hover:text-white"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={() => openReviewModal(booking)}
-                    className="px-2 py-1 text-blue-600 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
-                  >
-                    Review
-                  </button>
-                  <button
-                    onClick={() => openUpdateDateModal(booking)}
-                    className="px-2 py-1 text-green-600 border border-green-600 rounded hover:bg-green-600 hover:text-white"
-                  >
-                    Update
-                  </button>
-                </td>
+      <div className="overflow-x-auto rounded-lg">
+        {bookings && bookings.length < 0 ? (
+          <table className="w-full border-collapse bg-white shadow-md">
+            <thead className="bg-primary text-white uppercase text-sm lg:text-md">
+              <tr>
+                <th className="px-4 py-2 text-left">Image</th>
+                <th className="px-4 py-2">Room Name</th>
+                <th className="px-4 py-2">Price</th>
+                <th className="px-4 py-2">Guests</th>
+                <th className="px-4 py-2">Booking Date</th>
+                <th className="px-4 py-2">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody className="text-gray-600 text-md lg:text-lg">
+              {bookings.map((booking, index) => (
+                <tr
+                  key={index}
+                  className={`text-center ${
+                    index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                  }`}
+                >
+                  <td className="px-4 py-2">
+                    <img
+                      src={booking.image}
+                      alt={booking.name}
+                      className="w-12 h-12 rounded-lg object-cover"
+                    />
+                  </td>
+                  <td className="px-4 py-2">{booking.name}</td>
+                  <td className="px-4 py-2">${booking.price}</td>
+                  <td className="px-4 py-2">{booking.capacity}</td>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-700 border-b">
+                    <span className="font-semibold text-gray-900">From: </span>
+                    {booking.startDate}
+                    <br />
+                    <span className="font-semibold text-gray-900">To: </span>
+                    {booking.endDate}
+                  </td>
+                  <td className="px-4 py-4 text-sm flex flex-col justify-center items-center gap-2 lg:flex-row lg:gap-4">
+                    <button
+                      onClick={() =>
+                        handleCancel(
+                          booking._id,
+                          booking.Room_id,
+                          booking.startDate
+                        )
+                      }
+                      className="px-2 py-1 text-red-600 border border-red-600 rounded hover:bg-red-600 hover:text-white"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={() => openReviewModal(booking)}
+                      className="px-2 py-1 text-blue-600 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
+                    >
+                      Review
+                    </button>
+                    <button
+                      onClick={() => openUpdateDateModal(booking)}
+                      className="px-2 py-1 text-green-600 border border-green-600 rounded hover:bg-green-600 hover:text-white"
+                    >
+                      Update
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <div className="min-h-screen flex flex-col justify-center items-center">
+            <div className="text-center">
+              <p className="text-primary text-4xl font-bold mb-4">
+                No Bookings Found
+              </p>
+              <p className="text-gray-600 text-lg">
+                You haven&apos;t made any room bookings yet. Explore our
+                available rooms and make your first booking today!
+              </p>
+              <div className="mt-6">
+                <Link
+                  to="/rooms"
+                  className="px-6 py-3 bg-primary text-white font-medium hover:bg-secondary hover:text-black rounded-md shadow-md hover:bg-primary-dark transition-all"
+                >
+                  Browse Rooms
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Update Date Modal */}

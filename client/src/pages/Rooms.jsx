@@ -153,7 +153,7 @@ const Rooms = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl"
             >
               <img
-                className="w-full h-64 object-cover object-center"
+                className="w-full h-48 object-cover object-center"
                 src={room.image}
                 alt={room.name}
               />
