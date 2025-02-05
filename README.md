@@ -108,7 +108,7 @@ Here’s the full installation process for **The Tourist Guide** project:
 First, clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/arifhassansky/Elite-Explore
+git clone https://github.com/arifhassansky/roomify.git
 ```
 
 ### 2. **Install Dependencies (Frontend)**
