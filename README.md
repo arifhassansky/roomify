@@ -101,85 +101,88 @@ This project aims to create a **Hotel Booking Platform** that combines a sleek u
 - **Netlify**: https://roomifysky.netlify.app
 - **Firebase**: https://roomify-984fd.web.app
 
-## 💻 Local Setup Guide
+## 📚 Installation
+Here’s the full installation process for **The Tourist Guide** project:
 
-Follow these steps to run the project locally:
-
-### 1. Clone the repository
-
+### 1. **Clone the Repository**
 First, clone the project repository to your local machine:
 
 ```bash
-git clone https://github.com/arifhassansky/roomify.git
-cd roomify
+git clone https://github.com/arifhassansky/Elite-Explore
 ```
 
-### 2. Install dependencies
+### 2. **Install Dependencies (Frontend)**
+After cloning the repository, navigate to the project directory:
 
-Run the following command to install the necessary dependencies:
+```bash
+cd client
+```
+
+Then, install the required dependencies for the frontend:
 
 ```bash
 npm install
 ```
 
-### 3. Set up environment variables
+### 3. **Install Dependencies (Backend)**
+For the backend, you'll need to set up a separate project folder, assuming you already have the backend code. If not, you may need to clone the backend repository as well.
 
-To configure the backend services like Firebase and MongoDB, you'll need to set up environment variables. Create a `.env` file in the root of the project and add the following:
+Once in the backend directory, install dependencies:
 
 ```bash
-REACT_APP_FIREBASE_API_KEY=your-firebase-api-key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
-REACT_APP_FIREBASE_PROJECT_ID=your-firebase-project-id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your-firebase-storage-bucket
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-firebase-messaging-sender-id
-REACT_APP_FIREBASE_APP_ID=your-firebase-app-id
+cd server
+```
+```bash
+npm install
 ```
 
-Make sure to replace `your-*` with actual credentials from your Firebase project.
+### 4. **Create a `.env` File (Backend)**
 
-### 4. Run the project
+You’ll need to create a `.env` file to store your environment variables such as MongoDB connection string, JWT secret, and Stripe keys. Here’s an example of what the `.env` file might look like:
 
-Once the dependencies are installed and environment variables are configured, you can run the project locally using:
+```env
+ACCESS_TOKEN_SECRET=your-jwt-secret
+STRIPE_SECRET_KEY=your-stripe-secret-key
+MONGO_URI=your-mongodb-uri
+```
+
+Make sure to replace the placeholders with your actual values.
+
+### 5. **Firebase Authentication Setup**
+Go to the [Firebase Console](https://console.firebase.google.com/), create a project, and set up Firebase Authentication with the required methods (email/password, Google, etc.). Add your Firebase config to the backend `.env` file.
+
+### 6. **Start the Backend Server**
+Start the backend server by running:
 
 ```bash
 npm start
 ```
 
-This will start the development server and open the project in your default browser. You can now begin working with the Roomify Platform locally.
+This will start your Express server and connect to MongoDB.
 
-## 🔧 Backend Setup (Optional)
-
-If you want to set up the backend locally for testing purposes:
-
-1. Navigate to the `server` directory (if applicable).
-2. Install backend dependencies:
-
-```bash
-npm install
-```
-
-3. Create a `.env` file in the backend directory with the following credentials:
-
-```bash
-MONGO_URI=your-mongo-db-uri
-JWT_SECRET=your-jwt-secret
-```
-
-4. Start the backend server:
+### 7. **Start the Frontend Server**
+Now, go to the frontend directory and start the React development server:
 
 ```bash
 npm run dev
 ```
 
-Your backend will now be running, and you can test the API along with the frontend.
+This will start the React development server, and you should be able to view the app by visiting [http://localhost:3000](http://localhost:3000).
 
----
+### 8. **Payment Integration (Stripe)**
+Ensure you have set up a Stripe account and retrieved your **Publishable Key** and **Secret Key**. Insert these keys in the backend `.env` file under `STRIPE_SECRET_KEY` and `STRIPE_PUBLIC_KEY`.
 
-That's it! You're all set up to explore and contribute to the **Roomify Platform**. Enjoy your journey! 🚀
-```
+You can also use test cards provided by Stripe for local development. You can find those details in the [Stripe documentation](https://stripe.com/docs/testing).
 
-This is a full setup guide that includes the necessary dependencies, local environment setup, and backend instructions for the **Roomify Platform** project. You can copy this into your `README.md` file for better clarity.
+### 9. **Environment Configuration**
+Ensure you have your environment configured for React and Node. You may also need tools like:
 
+- **MongoDB** (for database)
+- **Stripe** (for payment system)
+- **React Router** (for navigation)
+
+### 10. **Testing the Application**
+Once both frontend and backend are running, you can test the application on your local machine. Ensure you check for any issues related to authentication, Stripe payment, and dynamic content.
 
 
 
