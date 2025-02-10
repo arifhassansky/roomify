@@ -24,15 +24,6 @@ const MailBox = () => {
           showConfirmButton: false,
           timer: 1500,
         });
-      })
-      .catch(() => {
-        Swal.fire({
-          position: "top-center",
-          icon: "error",
-          title: "Something went wrong. Please try again!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
       });
   };
 

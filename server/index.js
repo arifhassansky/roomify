@@ -226,11 +226,22 @@ async function run() {
       const paymentSuccess = req.body;
       console.log(paymentSuccess);
 
-      const isValidPayment = await axios.get(
+      const { data } = await axios.get(
         `https://sandbox.sslcommerz.com/validator/api/validationserverAPI.php?val_id=${paymentSuccess.val_id}&store_id=roomi679509d284d3a&store_passwd=roomi679509d284d3a@ssl&format=json`
       );
-      console.log(isValidPayment);
-      res.json(paymentSuccess);
+
+      if (data.status !== "VALID") {
+        return res.status(400).send({ message: "Invaild Payment" });
+      }
+      const query = { transectionId: data.tran_id };
+      const updateDoc = {
+        $set: {
+          status: "paid",
+        },
+      };
+      const result = await paymentCollection.updateOne(query, updateDoc);
+      console.log(result);
+      res.send(result);
     });
 
     // update my booking date

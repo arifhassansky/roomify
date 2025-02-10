@@ -43,8 +43,8 @@ const Contacts = () => {
             </h2>
           </div>
           <div>
-            <figure className="md:w-80 lg:w-96 mt-8 md:mt-0 bg-secondary p-1 rounded-2xl">
-              <img className="rounded-2xl " src={mapImg} />
+            <figure className="md:w-80 lg:w-96 mt-8 md:mt-0 bg-primary p-1 rounded-2xl">
+              <img className="rounded-lg " src={mapImg} />
             </figure>
           </div>
         </div>
