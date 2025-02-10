@@ -4,8 +4,9 @@ require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
+const axios = require("axios");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // Use middleWare
 app.use(
@@ -22,6 +23,7 @@ app.use(
 );
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.urlencoded({ extended: true }));
 
 const verifyToken = (req, res, next) => {
   const token = req.cookies?.token;
@@ -54,6 +56,7 @@ async function run() {
     // await client.connect();
     const roomsCollection = client.db("Roomify").collection("rooms");
     const bookingCollection = client.db("Roomify").collection("bookings");
+    const paymentCollection = client.db("Roomify").collection("payments");
 
     // auth related apis
     app.post("/jwt", (req, res) => {
@@ -129,6 +132,7 @@ async function run() {
       const result = await roomsCollection.findOne(query);
       res.send(result);
     });
+
     // add booking
     app.post("/addBooking", async (req, res) => {
       const booking = req.body;
@@ -144,6 +148,7 @@ async function run() {
       const updated = await roomsCollection.updateOne(query, updateDoc);
       res.send(result);
     });
+
     // get booking details by email
     app.get("/booking/:email", verifyToken, async (req, res) => {
       const email = req.params.email;
@@ -155,24 +160,79 @@ async function run() {
       const result = await bookingCollection.find(query).toArray();
       res.send(result);
     });
-    // cancel booking by id
-    app.delete("/cancelBooking/:id", async (req, res) => {
+
+    // get booking by id for payment
+    app.get("/single-booking/:id", async (req, res) => {
       const id = req.params.id;
-      const RoomId = req.query.RoomId;
-
       const query = { _id: new ObjectId(id) };
-      const result = await bookingCollection.deleteOne(query);
-
-      //update room availability
-      const filter = { _id: new ObjectId(RoomId) };
-      const updateDoc = {
-        $set: {
-          availability: true,
-        },
-      };
-      const updated = await roomsCollection.updateOne(filter, updateDoc);
+      const result = await bookingCollection.findOne(query);
       res.send(result);
     });
+
+    // create payment by ssl
+    app.post("/create-payment", async (req, res) => {
+      const payment = req.body;
+
+      const trnxId = new ObjectId().toString();
+      payment.transectionId = trnxId;
+
+      const initiate = {
+        store_id: "roomi679509d284d3a",
+        store_passwd: "roomi679509d284d3a@ssl",
+        total_amount: payment.price,
+        currency: "BDT",
+        tran_id: trnxId,
+        success_url: "http://localhost:5000/success",
+        fail_url: "http://localhost:5000/fail",
+        cancel_url: "http://localhost:5000/cancel",
+        ipn_url: "http://localhost:5000/ipn",
+        shipping_method: "Courier",
+        product_name: "Computer.",
+        product_category: "Electronic",
+        product_profile: "general",
+        cus_name: "Customer Name",
+        cus_email: "customer@example.com",
+        cus_add1: "Dhaka",
+        cus_add2: "Dhaka",
+        cus_city: "Dhaka",
+        cus_state: "Dhaka",
+        cus_postcode: "1000",
+        cus_country: "Bangladesh",
+        cus_phone: "01711111111",
+        cus_fax: "01711111111",
+        ship_name: "Customer Name",
+        ship_add1: "Dhaka",
+        ship_add2: "Dhaka",
+        ship_city: "Dhaka",
+        ship_state: "Dhaka",
+        ship_postcode: 1000,
+        ship_country: "Bangladesh",
+      };
+      const iniResponse = await axios({
+        url: "https://sandbox.sslcommerz.com/gwprocess/v4/api.php",
+        method: "POST",
+        data: initiate,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+      const result = await paymentCollection.insertOne(payment);
+      const gatewayPageURL = iniResponse?.data?.GatewayPageURL;
+      res.send({ gatewayPageURL });
+    });
+
+    // for successful payment
+    app.post("/success", async (req, res) => {
+      const paymentSuccess = req.body;
+      console.log(paymentSuccess);
+
+      const isValidPayment = await axios.get(
+        `https://sandbox.sslcommerz.com/validator/api/validationserverAPI.php?val_id=${paymentSuccess.val_id}&store_id=roomi679509d284d3a&store_passwd=roomi679509d284d3a@ssl&format=json`
+      );
+      console.log(isValidPayment);
+      res.json(paymentSuccess);
+    });
+
     // update my booking date
     app.patch("/updateBookingDate/:id", async (req, res) => {
       const id = req.params.id;
@@ -188,6 +248,7 @@ async function run() {
       const result = await bookingCollection.updateOne(query, updateDoc);
       res.send(result);
     });
+
     // Get the latest 9 reviews sorted by timestamp in descending order
     app.get("/reviews", async (req, res) => {
       const rooms = await roomsCollection
