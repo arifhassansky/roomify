@@ -28,7 +28,7 @@ const Payment = () => {
       `${import.meta.env.VITE_URL}/create-payment`,
       payment
     );
-    console.log(data?.gatewayPageURL);
+
     if (data?.gatewayPageURL) {
       window?.location?.replace(data.gatewayPageURL);
     }

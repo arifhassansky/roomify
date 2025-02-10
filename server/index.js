@@ -240,8 +240,10 @@ async function run() {
         },
       };
       const result = await paymentCollection.updateOne(query, updateDoc);
-      console.log(result);
-      res.send(result);
+
+      if (result.modifiedCount > 0) {
+        res.redirect("http://localhost:5173/myBookings");
+      }
     });
 
     // update my booking date
