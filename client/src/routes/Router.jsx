@@ -11,6 +11,7 @@ import ErrorPage from "../pages/ErrorPage";
 import AboutUs from "../pages/AboutUs";
 import Contacts from "../pages/Contacts";
 import Gallery from "../pages/Gallery";
+import Payment from "../payment/Payment";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyBookings />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/payment/:id",
+        element: (
+          <PrivateRoute>
+            <Payment />
           </PrivateRoute>
         ),
       },

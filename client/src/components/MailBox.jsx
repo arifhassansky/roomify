@@ -1,4 +1,29 @@
+import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
+
 const MailBox = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_y6gnqrj",
+        "template_7uizrws",
+        form.current,
+        "H-t7KaPvHV_1LxB21"
+      )
+      .then(() => {
+        form.current.reset();
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Your message has been submitted",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+  };
+
   return (
     <div className="w-9/12 mx-auto">
       <h1 className="text-center text-3xl font-medium pb-10">Send Message</h1>
@@ -17,7 +42,7 @@ const MailBox = () => {
 
           {/* right div  */}
           <div className="lg:col-span-6 ">
-            <form className="mx-auto">
+            <form onSubmit={sendEmail} className="mx-auto">
               <div className="mb-4">
                 <label htmlFor="name" className="block mb-2 font-medium ">
                   Name
