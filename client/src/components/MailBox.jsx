@@ -1,7 +1,10 @@
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 const MailBox = () => {
+  const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -21,6 +24,15 @@ const MailBox = () => {
           showConfirmButton: false,
           timer: 1500,
         });
+      })
+      .catch(() => {
+        Swal.fire({
+          position: "top-center",
+          icon: "error",
+          title: "Something went wrong. Please try again!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       });
   };
 
@@ -32,53 +44,58 @@ const MailBox = () => {
         className="shadow-xl px-6 md:px-10 py-6 border-2 rounded-2xl border-primary relative mx-auto container"
       >
         <div className="grid lg:grid-cols-12 items-center gap-16">
+          {/* Left Image */}
           <div className="lg:col-span-6 place-items-center md:place-items-start">
             <img
-              className=" rounded-2xl"
+              className="rounded-2xl"
               src="https://i.ibb.co/McqLNL3/gif.gif"
-              alt=""
+              alt="Animated illustration of email sending"
             />
           </div>
 
-          {/* right div  */}
-          <div className="lg:col-span-6 ">
-            <form onSubmit={sendEmail} className="mx-auto">
+          {/* Right Form */}
+          <div className="lg:col-span-6">
+            <form onSubmit={sendEmail} ref={form} className="mx-auto">
               <div className="mb-4">
-                <label htmlFor="name" className="block mb-2 font-medium ">
+                <label htmlFor="name" className="block mb-2 font-medium">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="user_name"
-                  className="block w-full px-4 py-2 border border-primary rounded-lg  focus:outline-none"
+                  className="block w-full px-4 py-2 border border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block mb-2 font-medium ">
+                <label htmlFor="email" className="block mb-2 font-medium">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="user_email"
-                  className="block w-full px-4 py-2 border border-primary rounded-lg  focus:outline-none"
+                  className="block w-full px-4 py-2 border border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   required
                 />
               </div>
               <div className="mb-4">
-                <label className="block mb-2 font-medium">Message</label>
+                <label htmlFor="message" className="block mb-2 font-medium">
+                  Message
+                </label>
                 <textarea
+                  id="message"
                   rows={4}
-                  className="block w-full px-4 py-2 border border-primary focus:outline-none rounded-lg "
+                  name="message"
+                  className="block w-full px-4 py-2 border border-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   required
                 />
               </div>
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-primary btn text-white hover:bg-secondary hover:text-black px-4 py-2 mr-6"
+                  className="bg-primary btn text-white hover:bg-secondary hover:text-black px-4 py-2 mr-6 transition-all duration-200"
                 >
                   Send Message
                 </button>
